@@ -1,9 +1,6 @@
 package SystemITR.JosueGuinea2A.Departamentos.Entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,6 +10,7 @@ import lombok.Setter;
 public class DepartamentosEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "DEPARTAMENTO_ID")
     private Long id;
     @Column(name = "NOMBRE_DEPT")
